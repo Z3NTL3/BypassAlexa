@@ -19,7 +19,7 @@ if 'http://' in str(sys.argv[1]) or 'https://' in str(sys.argv[1]):
 else:
     pass
 
-class AlexaBrowser():
+class Alexa_Browser():
     def __init__(self):
         self.scraper = requests.get(f"https://www.alexa.com/siteinfo/{sys.argv[1]}", headers=HEADER)
         self.contentscraper = self.scraper.content.decode('utf-8')
