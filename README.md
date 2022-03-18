@@ -9,4 +9,4 @@ Bypass Alexa.com's veil which they have impleneted to their API <a href="https:/
 - pip3 install bs4
 
 # Alexa API
-No need to Alexa API use this script to get Alexa Ranking of an specific website.
+No need to Alexa API use this script to get Alexa Ranking of an specific website. Alexa API will be taken down on May 1 2022.
