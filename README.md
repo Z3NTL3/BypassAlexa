@@ -1,5 +1,5 @@
 # BypassAlexa
-Bypass Alexa.com's veil of their Alexa API
+Bypass Alexa.com's veil which they have impleneted to their API
 
 # Usage
 ``python3 bypass.py domain.com`` Do not fill up http or https or www in your url only like domain.com
