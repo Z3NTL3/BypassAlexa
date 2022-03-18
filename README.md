@@ -7,3 +7,6 @@ Bypass Alexa.com's veil which they have impleneted to their API <a href="https:/
 # Install
 - pip3 install requests<br>
 - pip3 install bs4
+
+# Alexa API
+No need to Alexa API use this script to get Alexa Ranking of an specific website.
