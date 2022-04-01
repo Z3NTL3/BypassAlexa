@@ -32,3 +32,5 @@ class Alexa_Browser():
         rankstr = str(ranking).strip('')
         getem = rankstr.split('\n')
         return getem[4].strip(' ')
+if __name__ == '__main__':
+    print(Alexa_Browser().AlexaRanking())
