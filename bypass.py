@@ -1,4 +1,4 @@
-import requests
+import httpx
 from bs4 import BeautifulSoup
 import sys
 
@@ -21,8 +21,9 @@ else:
 
 class Alexa_Browser():
     def __init__(self):
-        self.scraper = requests.get(f"https://www.alexa.com/siteinfo/{sys.argv[1]}", headers=HEADER)
-        self.contentscraper = self.scraper.content.decode('utf-8')
+        with httpx.Client(http2=True, headers=HEADER)as client:
+            self.scraper = client.get(f"https://www.alexa.com/siteinfo/{sys.argv[1]}", headers=HEADER)
+            self.contentscraper = self.scraper.text
 
     def AlexaRanking(self):
         content_scraped = self.contentscraper
@@ -31,6 +32,3 @@ class Alexa_Browser():
         rankstr = str(ranking).strip('')
         getem = rankstr.split('\n')
         return getem[4].strip(' ')
-
-ranking = Alexa_Browser().AlexaRanking()
-print(ranking)
